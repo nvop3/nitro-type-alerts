@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 from NitrotypePy import Player
 
-app = Flask(__name__)
+app = Flask(__name__) 
 
 @app.route("/")
 def home():
