@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
-from NitrotypePy import Player
+from NitrotypePy import user
+
 
 app = Flask(__name__) 
 
@@ -10,7 +11,8 @@ def home():
 @app.route("/track/<username>")
 def track(username):
     try:
-        player = Player(username)
+        racer_data = user(username)
+        
         return jsonify({
             "username": player.username,
             "speed": player.speed,
