@@ -1,5 +1,6 @@
 name: Nitro Type Tracker
 on:
+  workflow_dispatch:  # Enables manual runs
   schedule:
     - cron: "*/30 * * * *"  # Runs every 30 minutes
 jobs:
